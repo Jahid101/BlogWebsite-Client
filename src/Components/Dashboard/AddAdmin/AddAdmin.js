@@ -10,7 +10,7 @@ const AddAdmin = () => {
 
         console.log(newAdminInfo);
 
-        const url = `http://localhost:9999/addAdmin`;
+        const url = `https://floating-savannah-09787.herokuapp.com/addAdmin`;
         fetch(url, {
             method: 'POST',
             headers: {
