@@ -50,6 +50,9 @@ const AddBlog = () => {
                 console.log(response.data.data.display_url);
                 setImageURL(response.data.data.display_url);
                 setImageURLStatus(true);
+                if(imageURLStatus){
+                    alert('Image uploaded')
+                }
             })
             .catch(function (error) {
                 console.log(error);
