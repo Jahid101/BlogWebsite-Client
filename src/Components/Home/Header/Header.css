@@ -1,0 +1,19 @@
+.headerContainer{
+    height: 600px;
+}
+
+.headerLeft{
+    background-color: rgb(37, 37, 43);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5%;
+    color: white;
+    opacity: 0.8;
+}
+
+.headerBg{
+    background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
