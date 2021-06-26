@@ -1,53 +1,86 @@
 import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Login from './Components/Login/Login';
+import Error from './Components/Error/Error';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
+  Route
 } from "react-router-dom";
-import Main from './Components/Home/Main';
-import About from './Components/About/About';
-import Contact from './Components/Contact/Contact';
-import Order from './Components/Home/Order';
-import Navbar from './Components/Home/Navbar';
-import { useEffect, useState } from 'react';
-import Dropdown from './Components/Dropdown/Dropdown';
+import Register from './Components/Register/Register';
+import { createContext, useState } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Homepage from './Components/Home/Homepage/Homepage';
+import Navbar from './Components/Home/Navbar/Navbar';
+import Dashboardpage from './Components/Dashboard/Dashboardpage/Dashboardpage';
+import ServiceBooking from './Components/Dashboard/ServiceBooking/ServiceBooking';
+import ServiceList from './Components/Dashboard/ServiceList/ServiceList';
+import Feedback from './Components/Dashboard/Feedback/Feedback';
+import AddService from './Components/Dashboard/AddService/AddService';
+import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
+import OrderList from './Components/Dashboard/OrderList/OrderList';
+import ManageService from './Components/Dashboard/ManageService/ManageService';
+import SelectService from './Components/Dashboard/SelectService/SelectService';
+
+
+
+export const UserContext = createContext();
+
 
 function App() {
 
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    const hideMenu = () => {
-      if (window.innerWidth > 768 && isOpen) {
-        setIsOpen(false)
-        console.log('resized successfully');
-      }
-    };
-
-    window.addEventListener('resize', hideMenu);
-
-    return () => {
-      window.removeEventListener('remove', hideMenu);
-    }
-
-  });
+  const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
-    <Router>
-      <Navbar toggle={toggle} />
-      <Dropdown isOpen={isOpen} toggle={toggle}/>
-
-      <Switch>
-        <Route path="/" exact component={Main} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/order" component={Order} />
-      </Switch>
-    </Router>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Navbar></Navbar>
+        <Switch>
+          <Route exact path="/">
+            <Homepage></Homepage>
+          </Route>
+          <Route path="/home">
+            <Homepage></Homepage>
+          </Route>
+          <PrivateRoute path="/dashboard">
+            <Dashboardpage></Dashboardpage>
+          </PrivateRoute>
+          <PrivateRoute path="/serviceList">
+            <ServiceList></ServiceList>
+          </PrivateRoute>
+          <PrivateRoute path="/feedback">
+            <Feedback></Feedback>
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
+            <AddService></AddService>
+          </PrivateRoute>
+          <PrivateRoute path="/addAdmin">
+            <AddAdmin></AddAdmin>
+          </PrivateRoute>
+          <PrivateRoute path="/orderList">
+            <OrderList></OrderList>
+          </PrivateRoute>
+          <PrivateRoute path="/manageService">
+            <ManageService></ManageService>
+          </PrivateRoute>
+          <PrivateRoute path="/serviceBooking/:id">
+            <ServiceBooking></ServiceBooking>
+          </PrivateRoute>
+          <PrivateRoute path="/serviceBooking">
+            <SelectService></SelectService>
+          </PrivateRoute>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+          <Route path="*">
+            <Error></Error>
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 

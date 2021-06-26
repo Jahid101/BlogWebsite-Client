@@ -15,7 +15,7 @@ const ServiceBooking = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:9999/serviceBooking/${id}`)
+        fetch(`https://morning-brushlands-06822.herokuapp.com/serviceBooking/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [id])
@@ -48,7 +48,7 @@ const ServiceBooking = () => {
             orderTime: new Date()
         };
 
-        fetch('http://localhost:9999/addOrder', {
+        fetch('https://morning-brushlands-06822.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

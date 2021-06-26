@@ -17,7 +17,7 @@ const AddService = () => {
         };
 
 
-        const url = `http://localhost:9999/addService`;
+        const url = `https://morning-brushlands-06822.herokuapp.com/addService`;
         fetch(url, {
             method: 'POST',
             headers: {
