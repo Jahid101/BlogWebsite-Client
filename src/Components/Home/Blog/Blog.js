@@ -17,7 +17,7 @@ const Blog = () => {
 
     return (
         <div className="mt-2 blogBg" id="blog">
-            <h1 className="text-center mb-3 text-light" style={{ color: 'black', fontSize: '55px' }}>Our Blogs</h1>
+            <h1 className="text-center mt-2 mb-3 text-light" style={{ color: 'black', fontSize: '55px' }}>News</h1>
             <div className="row">
                 {
                     blog.map(blog => <BlogCard blog={blog}></BlogCard>)

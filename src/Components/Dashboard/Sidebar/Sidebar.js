@@ -32,12 +32,12 @@ const Sidebar = () => {
                 <div style={{ display: checkAdmin ? 'block' : 'none' }}>
                     <li>
                         <Link to="/addBlog" className="text-white" >
-                            <FontAwesomeIcon icon={faPlus} /> <span>Add Blog</span>
+                            <FontAwesomeIcon icon={faPlus} /> <span>Add News</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/manageBlog" className="text-white">
-                            <FontAwesomeIcon icon={faTasks} /> <span>Manage Blog</span>
+                            <FontAwesomeIcon icon={faTasks} /> <span>Manage News</span>
                         </Link>
                     </li>
                 </div>

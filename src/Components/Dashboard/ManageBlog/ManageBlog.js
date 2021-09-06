@@ -41,7 +41,7 @@ const ManageBlog = () => {
             <Sidebar></Sidebar>
 
             <div style={{ marginLeft: '270px' }}>
-                <h3 className="ml-5 mb-5">Total Blogs : {blog.length}</h3>
+                <h3 className="ml-5 mb-5">Total News : {blog.length}</h3>
 
                 <table class="table text-center">
                     <thead>

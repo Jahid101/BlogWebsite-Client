@@ -37,26 +37,29 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <Link class="nav-link active text-light" aria-current="page" to="">Home</Link>
+                            <Link class="nav-link active text-light" aria-current="page" to="/home">Home</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link active text-light" to="">Subscribe</Link>
+                            <Link class="nav-link active text-light" to="/subscribe">Subscribe</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link active text-light" to="">Contact</Link>
+                            <Link class="nav-link active text-light" to="/contact">Contact</Link>
                         </li>
                         <li class="nav-item dropdown">
                             <Link class="nav-link dropdown-toggle active text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 More News
                             </Link>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link class="dropdown-item" to="">Fashion</Link></li>
-                                <li><Link class="dropdown-item" to="">Travel</Link></li>
-                                <li><Link class="dropdown-item" to="">Culture</Link></li>
-                                <li><Link class="dropdown-item" to="">Photography</Link></li>
-                                <li><Link class="dropdown-item" to="">Sports</Link></li>
-                                <li><Link class="dropdown-item" to="">International</Link></li>
+                                <li><Link class="dropdown-item" to="/fashion">Fashion</Link></li>
+                                <li><Link class="dropdown-item" to="/travel">Travel</Link></li>
+                                <li><Link class="dropdown-item" to="/culture">Culture</Link></li>
+                                <li><Link class="dropdown-item" to="/photography">Photography</Link></li>
+                                <li><Link class="dropdown-item" to="/sports">Sports</Link></li>
+                                <li><Link class="dropdown-item" to="/international">International</Link></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <Link class="nav-link active text-light" to="/dashboard">Dashboard</Link>
                         </li>
 
                         {loggedInUser.email ? '' : <li class="nav-item">

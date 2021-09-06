@@ -11,8 +11,11 @@ const AddBlog = () => {
 
 
     const handleBlogSubmit = e => {
+        
         const blogInfo = {
             title: e.target.title.value,
+            author: e.target.author.value,
+            category: e.target.category.value,
             blogDetails: e.target.blogDetails.value,
             imageURL: imageURL
         };
@@ -64,18 +67,26 @@ const AddBlog = () => {
             <Sidebar></Sidebar>
 
             <div style={{ marginLeft: '270px' }}>
-                <h2 className="mb-4">Add Blog</h2>
+                <h2 className="mb-4">Add News</h2>
                 <br />
                 <form onSubmit={handleBlogSubmit}>
                     <h5>Title</h5>
-                    <input type="text" class="form-control w-50" placeholder="Blog title" name="title" aria-label="First name" required />
+                    <input type="text" class="form-control w-50" placeholder="News title" name="title" aria-label="First name" required />
                     <br />
 
-                    <h5>Blog Details</h5>
-                    <textarea type="text" class="form-control w-50" placeholder="Blog Details" name="blogDetails" aria-label="Last name" required />
+                    <h5>Author</h5>
+                    <input type="text" class="form-control w-50" placeholder="Author" name="author" aria-label="First name" required />
                     <br />
 
-                    <h5>Blog Image</h5>
+                    <h5>Category</h5>
+                    <input type="text" class="form-control w-50" placeholder="Category" name="category" aria-label="First name" required />
+                    <br />
+
+                    <h5>News Details</h5>
+                    <textarea type="text" class="form-control w-50" placeholder="News Details" name="blogDetails" aria-label="Last name" required />
+                    <br />
+
+                    <h5>News Image</h5>
                     <input type="file" onChange={handleImageUpload} class="mb-5" placeholder="Last name" aria-label="Last name" required />
 
                     {

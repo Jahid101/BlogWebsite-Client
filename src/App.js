@@ -37,6 +37,30 @@ function App() {
           <Route path="/home">
             <Homepage></Homepage>
           </Route>
+          <Route path="/subscribe">
+
+          </Route>
+          <Route path="/contact">
+
+          </Route>
+          <Route path="/fashion">
+
+          </Route>
+          <Route path="/travel">
+
+          </Route>
+          <Route path="/culture">
+
+          </Route>
+          <Route path="/photography">
+
+          </Route>
+          <PrivateRoute path="/sports">
+
+          </PrivateRoute>
+          <PrivateRoute path="/international">
+
+          </PrivateRoute>
           <PrivateRoute path="/dashboard">
             <Main></Main>
           </PrivateRoute>
