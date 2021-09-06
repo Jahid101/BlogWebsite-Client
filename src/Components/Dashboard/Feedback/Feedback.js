@@ -19,7 +19,7 @@ const Feedback = () => {
 
         console.log(feedbackInfo);
 
-        const url = `https://floating-savannah-09787.herokuapp.com/addFeedback`;
+        const url = `http://localhost:9999/addFeedback`;
         fetch(url, {
             method: 'POST',
             headers: {

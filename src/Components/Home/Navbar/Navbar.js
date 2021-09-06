@@ -28,25 +28,42 @@ const Navbar = () => {
     }
 
     return (
-        <nav class="navbar navbar-expand-lg navbarBg navbar-light mb-2 ">
-            <div class="container-fluid text-light">
-                <Link class="navbar-brand text-light" to="/"><h1><strong>Retro Tech</strong></h1></Link>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark text-light">
+            <div class="container-fluid">
+                <Link class="navbar-brand text-warning fs-2" to="/">NewsPortal</Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mr-3">
-                            <Link class="nav-link active text-light" aria-current="page" to="/home">Home</Link>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <Link class="nav-link active text-light" aria-current="page" to="">Home</Link>
                         </li>
-                        <li class="nav-item mr-5">
-                            <Link class="nav-link active text-light" aria-current="page" to="/dashboard">Dashboard</Link>
+                        <li class="nav-item">
+                            <Link class="nav-link active text-light" to="">Subscribe</Link>
                         </li>
-                        {loggedInUser.email ? '': <li class="nav-item">
+                        <li class="nav-item">
+                            <Link class="nav-link active text-light" to="">Contact</Link>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <Link class="nav-link dropdown-toggle active text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More News
+                            </Link>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><Link class="dropdown-item" to="">Fashion</Link></li>
+                                <li><Link class="dropdown-item" to="">Travel</Link></li>
+                                <li><Link class="dropdown-item" to="">Culture</Link></li>
+                                <li><Link class="dropdown-item" to="">Photography</Link></li>
+                                <li><Link class="dropdown-item" to="">Sports</Link></li>
+                                <li><Link class="dropdown-item" to="">International</Link></li>
+                            </ul>
+                        </li>
+
+                        {loggedInUser.email ? '' : <li class="nav-item">
                             <Link class="nav-link active text-light" to="/register">
                                 <button class="btn btn-info ms-5 mr-3">
                                     Register
-                            </button>
+                                </button>
                             </Link>
                         </li>}
                         <li class="nav-item active ms-3
@@ -58,10 +75,12 @@ const Navbar = () => {
                                 <input type="submit" class="btn btn-success" onClick={handleSignOut} value={loggedInUser.email ? 'Log Out' : 'Log In'} />
                             </Link>
                         </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
+
     );
 };
 

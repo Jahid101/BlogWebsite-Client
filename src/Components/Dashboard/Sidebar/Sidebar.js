@@ -14,7 +14,7 @@ const Sidebar = () => {
     console.log(loggedInUser)
 
     useEffect(() => {
-        fetch('https://floating-savannah-09787.herokuapp.com/checkAdmin', {
+        fetch('http://localhost:9999/checkAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })

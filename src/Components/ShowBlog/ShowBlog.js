@@ -8,7 +8,7 @@ const ShowBlog = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`https://floating-savannah-09787.herokuapp.com/showBlog/${id}`)
+        fetch(`http://localhost:9999/showBlog/${id}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [id])
