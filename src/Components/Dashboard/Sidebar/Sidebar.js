@@ -31,15 +31,20 @@ const Sidebar = () => {
 
                 <div style={{ display: checkAdmin ? 'block' : 'none' }}>
                     <li>
-                        <Link to="/addBlog" className="text-white" >
+                        <Link to="/addBlog" className="text-light" >
                             <FontAwesomeIcon icon={faPlus} /> <span>Add News</span>
                         </Link>
                     </li>
                     <li>
+                        <Link to="/addAdmin" className="text-light" >
+                            <FontAwesomeIcon icon={faPlus} /> <span>Add Admin</span>
+                        </Link>
+                    </li>
+                    {/* <li>
                         <Link to="/manageBlog" className="text-white">
                             <FontAwesomeIcon icon={faTasks} /> <span>Manage News</span>
                         </Link>
-                    </li>
+                    </li> */}
                 </div>
 
                 <div style={{ display: checkAdmin ? 'none' : 'block' }}>

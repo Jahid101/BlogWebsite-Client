@@ -11,7 +11,7 @@ const AddBlog = () => {
 
 
     const handleBlogSubmit = e => {
-        
+
         const blogInfo = {
             title: e.target.title.value,
             author: e.target.author.value,
@@ -34,7 +34,7 @@ const AddBlog = () => {
                 setDbStatus(data);
                 if (data) {
                     e.target.reset();
-                    alert('Blog added successfully.')
+                    alert('News added successfully.')
                 }
             })
 

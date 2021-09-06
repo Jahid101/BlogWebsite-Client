@@ -16,7 +16,10 @@ import AddBlog from './Components/Dashboard/AddBlog/AddBlog';
 import ManageBlog from './Components/Dashboard/ManageBlog/ManageBlog';
 import Feedback from './Components/Dashboard/Feedback/Feedback';
 import ShowBlog from './Components/ShowBlog/ShowBlog';
-
+import Blog from './Components/Home/Blog/Blog';
+import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
+import Footer from './Components/Home/Footer/Footer';
+import Subscribe from './Components/Subscribe/Subscribe';
 
 
 export const UserContext = createContext();
@@ -38,28 +41,28 @@ function App() {
             <Homepage></Homepage>
           </Route>
           <Route path="/subscribe">
-
+            <Subscribe></Subscribe>
           </Route>
           <Route path="/contact">
-
+            <Footer></Footer>
           </Route>
           <Route path="/fashion">
-
+            <Blog></Blog>
           </Route>
           <Route path="/travel">
-
+            <Blog></Blog>
           </Route>
           <Route path="/culture">
-
+            <Blog></Blog>
           </Route>
           <Route path="/photography">
-
+            <Blog></Blog>
           </Route>
           <PrivateRoute path="/sports">
-
+            <Blog></Blog>
           </PrivateRoute>
           <PrivateRoute path="/international">
-
+            <Blog></Blog>
           </PrivateRoute>
           <PrivateRoute path="/dashboard">
             <Main></Main>
@@ -69,6 +72,9 @@ function App() {
           </Route>
           <PrivateRoute path="/addBlog">
             <AddBlog></AddBlog>
+          </PrivateRoute>
+          <PrivateRoute path="/addAdmin">
+            <AddAdmin></AddAdmin>
           </PrivateRoute>
           <PrivateRoute path="/manageBlog">
             <ManageBlog></ManageBlog>
