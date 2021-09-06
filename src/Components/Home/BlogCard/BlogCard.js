@@ -20,7 +20,7 @@ const BlogCard = ({ blog }) => {
                 <div>
                     <h2 className="text-center mt-4 ">{blog.title}</h2>
                     <p className="text-center">{blog.category}</p>
-                    <h5><FontAwesomeIcon icon={faCalendarTimes} /> {day}</h5>
+                    <h6><FontAwesomeIcon icon={faCalendarTimes} /> {day}</h6>
                     <button className="btn btn-success">See More</button>
                 </div>
             </div>

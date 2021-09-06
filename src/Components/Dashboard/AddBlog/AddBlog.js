@@ -96,7 +96,7 @@ const AddBlog = () => {
                     <br />
                     <input className="btn btn-success mb-3" type="submit" value="Submit" />
                     {
-                        <span style={{ color: 'green' }}> {dbStatus ? "Blog added successfully." : ""}</span>
+                        <span style={{ color: 'green' }}> {dbStatus ? "News added successfully." : ""}</span>
                     }
                 </form>
             </div>

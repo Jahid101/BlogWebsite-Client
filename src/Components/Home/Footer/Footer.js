@@ -27,7 +27,7 @@ const Footer = () => {
                             </span>
                         </a>
 
-                        <Link to="/email">
+                        <Link to="/contact">
                             <span className="btn">
                                 <button className="btn btn-success"><FontAwesomeIcon icon={faMailBulk} /><span className="ms-2">Email us</span></button>
                             </span>

@@ -37,7 +37,7 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <Link class="nav-link active text-light" aria-current="page" to="/home">Home</Link>
+                            <Link class="nav-link active text-light" aria-current="page" to="/">Home</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link active text-light" to="/subscribe">Subscribe</Link>

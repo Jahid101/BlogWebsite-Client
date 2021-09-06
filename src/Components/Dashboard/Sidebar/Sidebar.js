@@ -40,11 +40,11 @@ const Sidebar = () => {
                             <FontAwesomeIcon icon={faPlus} /> <span>Add Admin</span>
                         </Link>
                     </li>
-                    {/* <li>
+                    <li>
                         <Link to="/manageBlog" className="text-white">
                             <FontAwesomeIcon icon={faTasks} /> <span>Manage News</span>
                         </Link>
-                    </li> */}
+                    </li>
                 </div>
 
                 <div style={{ display: checkAdmin ? 'none' : 'block' }}>
