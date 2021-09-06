@@ -21,7 +21,7 @@ const AddBlog = () => {
         };
 
 
-        const url = `http://localhost:9999/addBlog`;
+        const url = `https://floating-savannah-09787.herokuapp.com/addBlog`;
         fetch(url, {
             method: 'POST',
             headers: {
