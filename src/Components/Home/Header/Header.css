@@ -6,7 +6,7 @@
     background-color: rgb(37, 37, 43);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5%;
+    padding: 2%;
     color: white;
     opacity: 0.8;
 }
@@ -17,3 +17,21 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.topNewsCard{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    background-color: white;
+}
+
+.topNewsCardDesign{
+    transition: 0.3s ;
+  }
+  .topNewsCardDesign:hover{
+    transform: scale(1.1);
+  }

@@ -21,6 +21,8 @@ import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
 import Footer from './Components/Home/Footer/Footer';
 import Subscribe from './Components/Subscribe/Subscribe';
 import MoreNews from './Components/MoreNews/MoreNews';
+import ShowTopNews from './Components/ShowTopNews/ShowTopNews';
+import ShowTopNews2 from './Components/ShowTopNews/ShowTopNews2';
 
 
 export const UserContext = createContext();
@@ -73,6 +75,12 @@ function App() {
           </PrivateRoute>
           <Route path="/showBlog/:id">
             <ShowBlog></ShowBlog>
+          </Route>
+          <Route path="/showTopNews1">
+            <ShowTopNews></ShowTopNews>
+          </Route>
+          <Route path="/showTopNews2">
+            <ShowTopNews2></ShowTopNews2>
           </Route>
           <PrivateRoute path="/addBlog">
             <AddBlog></AddBlog>
