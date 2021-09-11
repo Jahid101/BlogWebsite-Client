@@ -20,6 +20,7 @@ import Blog from './Components/Home/Blog/Blog';
 import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
 import Footer from './Components/Home/Footer/Footer';
 import Subscribe from './Components/Subscribe/Subscribe';
+import MoreNews from './Components/MoreNews/MoreNews';
 
 
 export const UserContext = createContext();
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Footer></Footer>
+          </Route>
+          <Route path="/moreNews">
+            <MoreNews></MoreNews>
           </Route>
           <Route path="/fashion">
             <Blog></Blog>

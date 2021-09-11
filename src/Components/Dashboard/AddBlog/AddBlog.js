@@ -21,7 +21,7 @@ const AddBlog = () => {
         };
 
 
-        const url = `https://floating-savannah-09787.herokuapp.com/addBlog`;
+        const url = `http://localhost:9999/addBlog`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -53,7 +53,7 @@ const AddBlog = () => {
                 console.log(response.data.data.display_url);
                 setImageURL(response.data.data.display_url);
                 setImageURLStatus(true);
-                if(imageURLStatus){
+                if(response){
                     alert('Image uploaded')
                 }
             })

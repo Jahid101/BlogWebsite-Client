@@ -37,7 +37,7 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <Link class="nav-link active text-light" aria-current="page" to="/">Home</Link>
+                            <Link class="nav-link active text-info" aria-current="page" to="/">Home</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link active text-light" to="/subscribe">Subscribe</Link>
@@ -45,7 +45,11 @@ const Navbar = () => {
                         <li class="nav-item">
                             <Link class="nav-link active text-light" to="/contact">Contact</Link>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
+                            <Link class="nav-link active text-warning" to="/moreNews">More News</Link>
+                        </li>
+
+                        {/* <li class="nav-item dropdown">
                             <Link class="nav-link dropdown-toggle active text-light" to="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 More News
                             </Link>
@@ -57,14 +61,15 @@ const Navbar = () => {
                                 <li><Link class="dropdown-item" to="/sports">Sports</Link></li>
                                 <li><Link class="dropdown-item" to="/international">International</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
+
                         <li class="nav-item">
                             <Link class="nav-link active text-light" to="/dashboard">Dashboard</Link>
                         </li>
 
                         {loggedInUser.email ? '' : <li class="nav-item">
                             <Link class="nav-link active text-light" to="/register">
-                                <button class="btn btn-info ms-5 mr-3">
+                                <button class="btn btn-info ms-5 ">
                                     Register
                                 </button>
                             </Link>

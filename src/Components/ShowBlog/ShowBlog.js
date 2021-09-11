@@ -10,7 +10,7 @@ const ShowBlog = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`https://floating-savannah-09787.herokuapp.com/showBlog/${id}`)
+        fetch(`http://localhost:9999/showBlog/${id}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [id])
@@ -23,6 +23,7 @@ const ShowBlog = () => {
                 <img style={{ width: '100%', height: '70%' }} src={blog.imageURL} alt="" />
 
                 <h1 class="text-center">{blog.title}</h1>
+                <h5 class="text-center">{blog.category}</h5>
 
                 <h5><FontAwesomeIcon icon={faCalendarTimes} /> {day}</h5>
 
