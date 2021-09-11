@@ -6,6 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
 import Register from './Components/Register/Register';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
@@ -26,7 +27,6 @@ import ShowTopNews2 from './Components/ShowTopNews/ShowTopNews2';
 
 
 export const UserContext = createContext();
-
 
 function App() {
 
