@@ -12,7 +12,7 @@ const MoreNews = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:9999/blog')
+        fetch('https://floating-savannah-09787.herokuapp.com/blog')
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [])
@@ -35,7 +35,7 @@ const MoreNews = () => {
 
 
     const searchByCategory = () => {
-        fetch('http://localhost:9999/categoryName?category=' + categorySearch)
+        fetch('https://floating-savannah-09787.herokuapp.com/categoryName?category=' + categorySearch)
             .then(res => res.json())
             .then(data => {
                 if (data[0]) {
